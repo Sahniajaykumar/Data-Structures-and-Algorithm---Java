@@ -1,0 +1,44 @@
+package com.practice;
+
+import java.util.Scanner;
+
+public class Arrays_P {
+	
+	// Method to count elements in array using while loop
+    public static int countElements(int[] arr) {
+        int count = 0;
+        int i = 0;
+
+        while(i < arr.length) {
+            count++;
+            i++;
+        }
+        return count;
+    }
+
+    public static void main(String[] args) {
+
+        Scanner scan = new Scanner(System.in);
+
+        System.out.print("Enter the number of elements: ");
+        int n = scan.nextInt();
+
+        int[] arr = new int[n];
+
+        // Input using while loop
+        System.out.println("Enter all elements:");
+        int i = 0;
+        while(i < arr.length) {
+            arr[i] = scan.nextInt();
+            i++;
+        }
+
+        // Call method
+        int totalCount = countElements(arr);
+
+        System.out.println("Total elements in array = " + totalCount);
+        
+        scan.close();
+	   
+  }  
+}
